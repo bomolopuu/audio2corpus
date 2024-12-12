@@ -46,7 +46,6 @@ async def transcribe(audio_file: UploadFile = File(...),
     # predicted_ids = torch.argmax(logits, dim=-1)
     # transcription = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0]
 
-
     # Clean up the temporary file
     os.remove(audio_path)
     os.remove(vocab_path)
