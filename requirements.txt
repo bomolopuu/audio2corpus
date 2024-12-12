@@ -1,0 +1,5 @@
+jupyter
+evaluate
+git+https://github.com/huggingface/transformers.git
+jiwer
+accelerate
