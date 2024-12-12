@@ -5,3 +5,10 @@ librosa
 uvicorn
 torch
 os
+
+# Fine-tune
+jupyter
+evaluate
+git+https://github.com/huggingface/transformers.git
+jiwer
+accelerate
