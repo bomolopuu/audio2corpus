@@ -1,6 +1,25 @@
-install:
-	@pip install -e .
-  
+# Local images - using local computer's architecture
+# i.e. linux/amd64 for Windows / Linux / Apple with Intel chip
+#      linux/arm64 for Apple with Apple Silicon (M1 / M2 chip)
+
+docker_build_local:
+	docker build --tag=$(GAR_IMAGE):local .
+
+docker_run_local:
+	docker run \
+		-e PORT=8000 -p 8000:8000 \
+		--env-file .env \
+		$(GAR_IMAGE):local
+
+docker_run_local_interactively:
+	docker run -it \
+		-e PORT=8000 -p 8000:8000 \
+		--env-file .env \
+		$(GAR_IMAGE):local \
+		bash
+
+# Cloud images - using architecture compatible with cloud, i.e. linux/amd64
+
 gar_creation:
   gcloud auth configure-docker ${GCP_REGION}-docker.pkg.dev
   gcloud artifacts repositories create ${GAR_REPO} --repository-format=docker \
