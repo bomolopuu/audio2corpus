@@ -17,9 +17,15 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+# token=os.environ.get("HF_TOKEN")
+
 #load model
-processor = AutoProcessor.from_pretrained("mms-meta/mms-zeroshot-300m")
-model = AutoModelForCTC.from_pretrained("mms-meta/mms-zeroshot-300m")
+processor = AutoProcessor.from_pretrained("bomolopuu/wav2vec2-large-mms-1b-ngn-on-bam-colab")
+model = AutoModelForCTC.from_pretrained("bomolopuu/wav2vec2-large-mms-1b-ngn-on-bam-colab")
+
+# "/home/razifhaque/code/audio2corpus/audio2corpus/models/final_model"
+# processor = AutoProcessor.from_pretrained("/home/razifhaque/code/audio2corpus/audio2corpus/models/final_model")
+# model = AutoModelForCTC.from_pretrained("/home/razifhaque/code/audio2corpus/audio2corpus/models/final_model")
 app.state.model = model
 
 UPLOAD_DIR="uploaded_audio"

@@ -1,0 +1,7 @@
+# API
+fastapi==0.108.0
+transformers
+librosa
+uvicorn
+torch
+python-multipart
