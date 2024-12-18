@@ -1,4 +1,4 @@
-# Local images - using local computer's architecture
+# Local images - using local computer's architecture.
 # i.e. linux/amd64 for Windows / Linux / Apple with Intel chip
 #      linux/arm64 for Apple with Apple Silicon (M1 / M2 chip)
 

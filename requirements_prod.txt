@@ -1,4 +1,4 @@
-# API
+# required API
 fastapi==0.108.0
 transformers
 librosa

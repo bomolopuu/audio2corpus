@@ -72,7 +72,6 @@ async def transcribe(audio_file: UploadFile = File(...)
     # os.remove(vocab_path)
 
     return {"transcription": transcription, "filename": audio_file.filename}
-    # return FileResponse(audio_path)
 
     # return {"audio": {audio_file.},
     #         "vocabulary": {vocab_file.filename}}
