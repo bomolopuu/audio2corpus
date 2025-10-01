@@ -1,5 +1,5 @@
 # audio2corpus
-App to transcribe audio 2 text for any given language
+App to transcribe audio 2 text for Ngen language
 
 
 We fine-tuned Meta AI’s large speech model 
